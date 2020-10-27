@@ -31,8 +31,15 @@ pub use ipp_2019::*;
 #[cfg(feature="2019")]
 const _FORCE_UNIQUE_FEATURE: ::std::os::raw::c_int = 2019;
 
+#[cfg(feature="2020")]
+mod ipp_2020;
+#[cfg(feature="2020")]
+pub use ipp_2020::*;
+#[cfg(feature="2020")]
+const _FORCE_UNIQUE_FEATURE: ::std::os::raw::c_int = 2020;
+
 // Intentionally trigger a compile time error to force a feature flag specifying
 // version to be used.
-#[cfg(not(any(feature = "2017", feature = "2018", feature = "2019")))]
+#[cfg(not(any(feature = "2017", feature = "2018", feature = "2019", feature = "2020")))]
 compile_error!("You are attempting to compile without a required feature flag \
-    being used. You must use one of either `2017`, `2018`, `2019`");
+    being used. You must use one of either `2017`, `2018`, `2019`, `2020`");

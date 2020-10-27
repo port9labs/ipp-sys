@@ -11,7 +11,7 @@ edition = "2018"
 
 [package.metadata.docs.rs]
 no-default-features = true
-features = [ "2019" ]
+features = [ "2020" ]
 
 [dependencies]
 ipp-headers-sys = { version = "0.4.3", path = "../ipp-headers-sys" }
@@ -29,3 +29,4 @@ do-linking = ["link-ippcore", "link-ippcv", "link-ippi", "link-ipps", "link-ippv
 2017=["ipp-headers-sys/2017"]
 2018=["ipp-headers-sys/2018"]
 2019=["ipp-headers-sys/2019"]
+2020=["ipp-headers-sys/2020"]

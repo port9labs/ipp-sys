@@ -5,8 +5,8 @@ This crate provides wrappers of the Intel Integrated Performance Primitives
 
 # Version support
 
-Use the `2017`, `2018`, or `2019` cargo feature to use IPP 2017, 2018, or
-2019 respectively.
+Use the `2017`, `2018`, `2019` or `2020` cargo feature to use IPP 2017, 2018, 2019, or
+2020 respectively.
 
 # Download IPP
 

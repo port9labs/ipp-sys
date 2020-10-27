@@ -58,7 +58,9 @@ fn ipp_build_inner(libname: String, libdir_base: PathBuf, target: String, link_t
                     libdir = thin_universal_binary(&universal_fname, &thin_fname.into(), "x86_64");
                 }
             } else {
-                libdir = libdir.join("intel64");
+                if !libdir_base.to_str().unwrap().contains("2020") {
+                    libdir = libdir.join("intel64");
+                }
             }
         }
         "x86_64-unknown-linux-gnu" => {
